@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  snapchat:
+    build: .
+    image: snapchat
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Shanghai
+    container_name: snapchat
+    ports:
+      - "3001:3001"
